@@ -1,0 +1,99 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.shapArea{
+    height: 75vh;
+    border: 15px solid black;
+    animation: colorchng 5s infinite 2s ease-in-out ;
+    transition: all 5s linear ;
+    background-image: linear-gradient(45deg, red,purple ,rgb(0, 174, 255));
+    background-size: 300% 100%;
+    background-position: left;
+}
+.options ,.colors{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border: 2px solid orange;
+    padding: 10px;
+    margin: 15px;
+    background-image: url();
+    color: orange;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.205);
+}
+.options p{
+    padding: 5px;
+    color: orange;
+}
+.btn{
+    padding: 5px 15px;
+    font-size: larger;
+    background-image: linear-gradient(-45deg , white 50%, orange 50%);
+    background-size: 250% 200%;
+    background-position: right;
+    transition: all 0.3s linear;
+    border-radius: 20px;
+    border:none;
+    border: 2px solid orange;
+    border-color: orange;
+    color: orange;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.137);
+    cursor: pointer;
+}
+.btn:hover{
+    color: white;
+    background-position: left;
+    box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.466);
+    transform: scale(1.02);
+}
+.move-around{
+    animation: square 5s infinite 0s ease-in-out;
+    position: relative;
+    transition: all 1 ease-in-out;
+    border-left: 0px solid transparent;
+    border-right: 0px solid transparent ;
+    border-bottom: 100px solid red;
+}
+@keyframes square{
+    0%{
+        left:1vw;
+        top:2.5vh;
+    }
+    25%{
+        left: 90vw;
+        top: 2.5vh;
+    }
+    50%
+    {
+        left: 90vw;
+        top: 55vh;
+    }
+    75%{
+        left: 1vw;
+        top: 55vh;
+    }
+    100%{
+        left: 1vw;
+        top: 2.5vh;
+    }
+}
+@keyframes colorchng{
+
+    0%{
+        background-position: left;
+
+    }
+
+    50%{
+        background-position: right;
+    }
+
+    100%{
+        background-position: left;
+    }
+}
