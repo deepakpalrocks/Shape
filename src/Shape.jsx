@@ -3,7 +3,7 @@ import React,{useState} from 'react';
 
 const Shape=()=>{
 
-    const [shape,setShape]=useState("triangle");
+    const [shape,setShape]=useState("square");
     const [color,setColor]=useState("cyan");
     const setCircle=()=>{
         setShape("circle");
@@ -15,8 +15,8 @@ const Shape=()=>{
         setShape("square");
     }
     const shapeStyle={
-        width:"100px",
-        height:"100px",
+        width:"5vw",
+        height:"5vw",
         borderRadius:"0px",
         backgroundColor:""+color,
         borderLeft:"0px",
@@ -32,9 +32,9 @@ const Shape=()=>{
         shapeStyle.backgroundColor="transparent";
         shapeStyle.width="0px";
         shapeStyle.height="0px";
-        shapeStyle.borderLeft="50px solid transparent";
-        shapeStyle.borderRight="50px solid transparent";  
-        shapeStyle.borderBottom="100px solid "+color;
+        shapeStyle.borderLeft="2.5vw solid transparent";
+        shapeStyle.borderRight="2.5vw solid transparent";  
+        shapeStyle.borderBottom="5vw solid "+color;
     }
 
     const colorRed=()=>{
@@ -55,15 +55,21 @@ const Shape=()=>{
 
         <div className="options">
             <p>Shape of object</p>
+            <div>
             <button className="btn" onClick={setCircle}>Circle</button>
             <button className="btn" onClick={setSquare}>Square</button>
             <button className="btn" onClick={setTriangle}>Triangle</button>
+
+            </div>
         </div>
         <div className="colors">
         <p>Color of Object</p>
+            <div className="btns">
             <button className="btn" onClick={colorRed}>Red</button>
             <button className="btn" onClick={colorBlue}>Blue</button>
             <button className="btn" onClick={colorGreen}>Green</button>
+
+            </div>
         </div>
         </>
     );
