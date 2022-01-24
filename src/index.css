@@ -63,23 +63,28 @@
     0%{
         left:1vw;
         top:2.5vh;
+        /* transform: rotate(90deg); */
     }
     25%{
         left: 90vw;
         top: 2.5vh;
+        transform: rotate(-720deg);
     }
     50%
     {
         left: 90vw;
         top: 55vh;
+        transform: rotate(-1080deg);
     }
     75%{
         left: 1vw;
         top: 55vh;
+        transform: rotate(-1800deg);
     }
     100%{
         left: 1vw;
         top: 2.5vh;
+        transform: rotate(-2160deg);
     }
 }
 @keyframes colorchng{
